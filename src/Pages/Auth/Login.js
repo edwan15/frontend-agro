@@ -148,19 +148,9 @@ const Login = () => {
                   >
                     Enviar
                   </button>
-                  <Link to="/reset">
-                    <p className="text-lg text-white  p-1  border-solid border-b-2  border-emerald-400 font-extrabold hover:text-orange-600 cursor-pointer">
-                      Reset Password
-                    </p>
-                  </Link>
+                  
                   <p className="text-center  text-2xl font-extrabold">--or--</p>
-                  {/* <button
-                    className="p-1 px-2 bg-orange-500 rounded-md mt-2 text-white flex items-center justify-center"
-                    type="submit"
-                    onClick=""
-                  >
-                    <FaGooglePlusG /> Login With Google
-                  </button> */}
+                  
                   <p className="text-center  mt-2">
                     <Link to={"/"}>
                       <span className="text-lg text-white  p-1  border-solid border-b-2 border-emerald-400 font-extrabold hover:text-orange-600 cursor-pointer">
