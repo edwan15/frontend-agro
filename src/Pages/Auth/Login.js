@@ -54,50 +54,6 @@ const Login = () => {
     }
   };
 
-  // const initialState = {
-  //   email: "",
-  //   password: "",
-  // };
-  // const Login = () => {
-  //   const dispatch = useDispatch();
-  //   const navigate = useNavigate();
-  //   const [isLoading, setIsLoading] = useState(false);
-  //   const [formData, setFormData] = useState(initialState);
-  //   const { email, password } = formData;
-
-  //   const handleInputChange = (e) => {
-  //     const { name, value } = e.target;
-  //     setFormData({ ...formData, [name]: value });
-  //   };
-
-  //   const log = async (e) => {
-  //     e.preventDefault();
-
-  //     if (!email || !password) {
-  //       return toast.error("completa todos los campos");
-  //     }
-  //     if (!validateEmail) {
-  //       return toast.error("email invalido");
-  //     }
-
-  //     const userData = {
-  //       email,
-  //       password,
-  //     };
-  //     setIsLoading(true);
-
-  //     try {
-  //       const data = await loginUser(userData);
-  //       console.log(data);
-  //       await dispatch(SET_LOGIN(true));
-  //       await dispatch(SET_NAME(data.name));
-  //       navigate("/panel");
-  //       setIsLoading(false);
-  //     } catch (error) {
-  //       setIsLoading(false);
-  //       console.log(error)
-  //     }
-  //   };
 
   return (
     <>
@@ -107,7 +63,6 @@ const Login = () => {
         <section>
           <div className="flex flex-cols-2 items-center justify-center py-16  ">
             <div className="max-w-lg max-h-[200px flex items-end   ">
-              {/* <img src={login} alt="login" className=" h-[465px] w-[500px] " /> */}
             </div>
             <div className="p-2  bottom-28  mt-20   ">
               <div className="p-12  border-solid border-2  rounded-lg shadow-lg my-10 bg-cardOverlay">
