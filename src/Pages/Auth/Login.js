@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { toast } from "react-toastify";
+import { toast , ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Link, useNavigate } from "react-router-dom";
 import { SlLogin } from "react-icons/sl";
@@ -41,14 +41,16 @@ const Login = () => {
       email,
       password,
     };
-    setIsLoading(true);
-    try {
+   try {
+      setIsLoading(true);
       const data = await loginUser(userData);
       console.log(data.name);
       await dispatch(SET_LOGIN(true));
       await dispatch(SET_NAME(data.name));
       navigate("/panel");
       setIsLoading(false);
+      setformData(initialState);
+      toast.success("login  successfully");
     } catch (error) {
       setIsLoading(false);
     }
@@ -57,8 +59,8 @@ const Login = () => {
 
   return (
     <>
+     <ToastContainer />
       {isLoading && <Loader />}
-
       <div className="h-screen sticky  bg-[url('https://grupovillaescusa.com/wp-content/uploads/2018/03/Grupo-Villaescusa-obra-contruccion-nave-industrial-el-jimenado-empresa-de-contruccion-murcia-alicante-2.jpg')]  bg-cover  bg-center bg-no-repeat  ">
         <section>
           <div className="flex flex-cols-2 items-center justify-center py-16  ">
